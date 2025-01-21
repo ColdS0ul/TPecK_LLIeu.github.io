@@ -1,0 +1,106 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Используем шрифт Montserrat */
+    background-color: #1f1f1f; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+    line-height: 1.6;
+    background-image: url('image/background.png'); /* Установка фонового изображения */
+    background-size: cover; /* Изменяет размер изображения, чтобы заполнить весь экран */
+    background-position: center; /* Центрирует изображение */
+    background-attachment: fixed; /* Фиксируем фон, чтобы он не двигался при прокрутке */
+
+}
+/* Общий стиль для контейнера главной секции */
+.hero {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: left;
+    padding: 50px 20px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Навигационные ссылки */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5px; /* Пробел между ссылками */
+    padding-right: 20px;
+}
+
+.nav-links a:hover {
+    background-color: #d81b60; /* Розовый при наведении */
+}
+
+
+
+
+/* Левая часть с иконкой канала */
+.hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-left .channel-icon {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+/* Правая часть с текстом */
+.hero-right {
+    flex: 2;
+    padding-left: 50px;
+}
+
+.hero-right h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-right p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Изменяем направление на колонку */
+        align-items: center; /* Центруем элементы по горизонтали */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        text-align: center; /* Центровка текста */
+        width: 100%; /* Кнопки растягиваются */
+    }
+
+    .social-links {
+        position: relative;
+        left: 0; /* Убираем сдвиг для социальных иконок на мобильных */
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left {
+        margin-bottom: 20px; /* Отступ снизу для аватарки на мобильных */
+    }
+
+    .hero-right {
+        padding-left: 0; /* Убираем отступ на мобильных устройствах */
+    }
+}

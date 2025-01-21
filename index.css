@@ -1,0 +1,205 @@
+/* Основные стили для сайта */
+body {
+    font-family: 'Montserrat', sans-serif; /* Используем шрифт Montserrat */
+    background-color: #1f1f1f; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+    line-height: 1.6;
+    background-image: url('image/background.png'); /* Установка фонового изображения */
+    background-size: cover; /* Изменяет размер изображения, чтобы заполнить весь экран */
+    background-position: center; /* Центрирует изображение */
+    background-attachment: fixed; /* Фиксируем фон, чтобы он не двигался при прокрутке */
+
+}
+
+/* Контейнер */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Стили для навигационной панели */
+.navbar {
+    background-color: #00000000;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Социальные иконки */
+/* Социальные иконки */
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 10px; /* Уменьшаем расстояние между иконками */
+    position: relative; /* Для сдвига */
+    left: -140px; /* Сдвигаем иконки еще левее */
+}
+
+.social-links li {
+    margin: 0;
+}
+
+.social-links a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links img {
+    width: 60%; /* Уменьшаем размер изображения в пределах кнопки */
+    height: 60%; /* Пропорциональное изменение */
+    object-fit: contain;
+}
+
+
+/* Навигационные ссылки */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5px; /* Пробел между ссылками */
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #9e1c00; /* Фиолетовый */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: #d81b60; /* Розовый при наведении */
+}
+
+/* Логотип */
+.logo-container {
+    display: flex;
+    align-items: center; /* Центрируем логотип по вертикали */
+    margin-left: 220px; /* Отступ слева для логотипа */
+}
+
+/* Карточки новостей */
+.news-cards {
+    display: flex; /* Выстраиваем элементы в ряд */
+    flex-wrap: wrap; /* Позволяем переносить элементы на следующую строку, если не хватает места */
+    justify-content: center; /* Центруем карточки по горизонтали */
+    gap: 100px; /* Задаем отступы между карточками */
+    margin-top: 100px; /* Отступ сверху для списка карточек */
+}
+
+.news-card {
+    background-color: #2d2d2d; /* Фон карточки */
+    border-radius: 10px; /* Скругленные углы */
+    overflow: hidden; /* Обрезаем контент, выходящий за рамки */
+    text-align: center; /* Центрируем текст */
+    transition: transform 0.1s; /* Анимация */
+    width: 300px; /* Фиксированная ширина карточки */
+    display: block; /* Делаем карточку блочным элементом для клика */
+    cursor: pointer; /* Курсор как указатель */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.news-card:hover {
+    transform: scale(1.01); /* Увеличение карточки при наведении */
+}
+
+.news-card img {
+    width: 100%; /* Изображение растягивается по ширине карточки */
+    height: auto; /* Сохраняем пропорции изображения */
+}
+
+.news-card h3 {
+    padding: 10px;
+    color: #ffffff;
+}
+
+/* Логотип */
+.logo-image {
+    height: 60px; /* Высота логотипа */
+    width: auto; /* Автоматическая ширина для сохранения пропорций */
+}
+
+/* Стили для разделов */
+.hero {
+    background-color: transparent; /* Убираем фоновый цвет для секции hero */
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section {
+    padding: 40px 20px;
+    color: #ffffff;
+}
+
+.section h2 {
+    color: #e63946;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Стили для видеоплееров */
+.video-list {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет видео переноситься на следующую строку */
+    justify-content: center; /* Центровка видео по горизонтали */
+    gap: 20px; /* Пробел между видео */
+}
+
+.video-list iframe {
+    width: 380px; /* Ширина видео будет 100% от контейнера */
+    height: 200px; /* Фиксированная высота */
+    border: none; /* Убираем рамку */
+}
+
+/* Стили для футера */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+    font-size: 14px;
+    border-top: 2px solid #e63946;
+}
+
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Изменяем направление на колонку */
+        align-items: center; /* Центруем элементы по горизонтали */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px; /* Меньшие отступы между кнопками */
+        width: 100%; /* Занимаем всю ширину */
+    }
+
+    .nav-links a {
+        text-align: center; /* Центровка текста */
+        width: 100%; /* Кнопки растягиваются */
+    }
+
+    .video-list iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
